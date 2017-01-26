@@ -67,7 +67,7 @@ public class GlobalController {
 
         driver.findElementByXPath("//text()[.='Scan']//..").click();
         Actions actions = new Actions(driver);
-        List<WebElement> foundCamps = driver.findElementsByXPath("//div[text()[.='Лагерь']]");
+        List<WebElement> foundCamps = driver.findElementsByXPath("//div[text()[.='Лагерь' or .='Аванпост']]");
 
         for (WebElement camp: foundCamps) {
             actions.doubleClick(camp).perform();
